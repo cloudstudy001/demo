@@ -1,0 +1,43 @@
+Tools
+-----
+- SQL Plus
+- SQL Developer
+- PL/SQL
+- Powershell
+- Git 
+- GitHub
+- Now IT for creating Changes, Tasks and Incidents
+- Linux commands
+- Oracle Enterprise Manager
+
+Main Tasks
+----------
+- Configuration Management
+- GitHub: Process Pull Request from CNS Developers
+- GitHub: Add new users to GitHub
+- Git: Create deployment script to install one or more Pull Requests
+- Git: Create new branches for new Releases or Patches
+- Git: Merge branches after production deployments took place
+- Oracle Enterprise Manager: Configure for CNS Releases in PTE environments
+
+Deployment Management
+- Run deployment script in PTE database at first and come back to developers in case of error
+- Compile changed Forms or/and Reports on the PTE Forms & Reports Server
+- Install batchscripts on the PTE Batch server (and later on all other batchservers including Production)
+- Install in other PTE environments: compiled Forms and Reports, batchscripts and database changes
+- Configure ORDS on Forms & Reports Servers in PTE
+- Create changes in Now IT to install in higher environments (CTE-M, CTE-F1 and CTE-F2)
+- Prepare installation in PPE for Business Acceptance Test
+- Prepare and perform Operational Readiness Testing in PPE (including Rollback testing)
+- Prepare installation in Production
+- Perform installation in Production on deployment day
+- Configure CNS on new Oracle WebLogic Application Servers in PTE environments
+
+Other tasks
+-----------
+- Adapt Powershell scripts (Refresh, deployment and CNS start scripts)
+- Stop and start batchjobs on Batchservers 
+- Order modules in the IKEA Software Catalogue and test after deployment
+- Perform Smoketests after deployment of a Release
+- Create new users and necessary roles to access all CNS environments
+- Plan refreshes of testdatabases with production data

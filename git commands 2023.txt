@@ -1,0 +1,150 @@
+git config --global user.name " "
+git config --global user.email " "
+
+git init .
+
+git add .
+git rm --cached <file name>(to back untaged area)
+
+git restore --staged (to restore the untracked area
+
+git commit -m "P2-2023 added to the staging area to track the file"
+
+git restore <file name> Discard the chnages in working directory
+
+git checkout
+
+git log
+git log --oneline (to show the one line log messages)
+git log --reflog
+git reflog
+
+Prints all commits in the specified date range.
+
+Use git log --since=<date-from> --until=<date-to> to view a log of all commits between <date-from> and <date-to>.
+You can use only --since=<date-from> to see all commits since a specific date or only --until=<date-to> to view all commits up to a specific date
+
+git log --since='Dec 7 2022' --until='Dec 8 2022'
+git log --since='2 weeks ago'
+
+
+for reseting with commit id
+
+git reset 
+
+git reset --soft commit id (this is recommended and by default without giving soft it will take soft only)
+git reset --hard commit 
+
+
+cp -rf /project2023 project2023_old
+
+git revert commit id (it revert and remove and revert id will create)
+
+git revert commit id --no-commit (it will  not show the commit message)
+
+
+
+Working directory--->Staging Area---->Local repo   Remote Repo
+
+------------
+
+Prints all commits by the specified author.
+
+Use git log --author=<author> to retrieve all commits by the specified <author>
+
+git log --author="Sreejith"
+
+Prints a list of all local branches sorted by date.
+
+Use git branch --sort=-committerdate to display a list of all local branches and sort them based on the date of their last commit.
+
+Prints a visual graph of all commits and branches in the repository.
+
+Use git log --pretty=oneline --graph --decorate --all to view a visual graph of the whole repository's history with commit id.
+
+git remote -v (can see the fetch and push links)
+
+if we wanted to set the push and fetch(pull) link 
+
+git remote set-url --push origin the link
+git remote set-url --fetch origin the link
+
+git remote add origin (then github repo link)
+git push -u origin master
+
+
+--------------------------------
+Creating branches
+
+git branch (can see the branches)
+git branch branchname (to create branch)
+git checkout branchname(to switchover the branch)
+git checkout -b branchname(if branch name is not created but still it will create branch and it will switchoover and data will be able to see from master)
+
+Merging
+
+we shoud always there in target branch before merging
+
+example:- if QA wanted merge with Testing then we should switch over to target branch and then merge it.
+
+git checkout testing
+git merge testing qa
+
+Deleting branch
+
+git branch -d qa (if suppose we merged all the commit with master and need to delete the qa branch then we can do like this)
+---------------------
+GIT REBASE
+
+its a process of moving or combaining a sequence of commits to a new base commit
+
+create some file in feature and create some file master and rebase it
+
+git rebase feature master
+
+-----------
+ 
+GIT CHERRY-PICK
+
+it will pick the particular file accordingly with commit id
+git checkout to master
+
+git log
+git cherry-pick commitid 
+
+---------------------------------------
+Git stash
+
+touch 1 2 3
+git add .
+git stash
+git stash pop  (it will show only the latest or recent stash)
+git stash pop 0 ( for every stash it will be have sequence no for 0,1,2
+git stash list
+
+------------------------------
+
+git squash
+
+multiple commits will make it as single commit in git history
+disadvntages :- multiple commits will make it as single commits but if you want to delete single commit in that it will be difficult
+since all the commits are we made it as single
+
+git rebase -i HEAD~[0]    ( No of commits can be mention in this bracket
+git rebase -i commitid (cmmit id can give from our end)
+
+in the editor it will show the log as reverse mode from normal git log 
+git squash not possible to do without a previous commit
+
+
+to abort
+
+git rebase --abort
+
+we can fix this issue
+git rebase --edit-todo 
+git rebase --continue
+---------------------------------
+Merge Conflicts
+
+
